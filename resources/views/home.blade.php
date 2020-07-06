@@ -8,28 +8,33 @@
     </head>
     <body>
         <div class="container">
-            <table class="table table-dark">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">NOME ARTICOLO</th>
-                  <th scope="col">PREZZO</th>
-                  <th scope="col">GENDER</th>
-                  <th scope="col">CODICE</th>
-                </tr>
-              </thead>
-              <tbody>
-                  @foreach ($all_vestiti as $vestito)
-                      <tr>
-                        <td> {{$vestito->id}}</td>
-                        <td>{{$vestito->article_name}}</td>
-                        <td>{{$vestito->prize}}</td>
-                        <td>{{$vestito->gender}}</td>
-                        <td>{{$vestito->codice_barre}}</td>
-                      </tr>
-                  @endforeach
-              </tbody>
-            </table>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">CLOTHES</h1>
+                    <table class="table table-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">NOME ARTICOLO</th>
+                          <th scope="col">PREZZO</th>
+                          <th scope="col">GENDER</th>
+                          <th scope="col">CODICE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          @foreach ($all_vestiti as $vestito)
+                              <tr>
+                                <td> {{$vestito->id}}</td>
+                                <td>{{$vestito->article_name}}</td>
+                                <td>{{$vestito->prize}}</td>
+                                <td>{{$vestito->gender}}</td>
+                                <td>{{$vestito->codice_barre}}</td>
+                              </tr>
+                          @endforeach
+                      </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </body>
 </html>
